@@ -5,21 +5,18 @@ public class Practice1 {
         Scanner input=new Scanner(System.in);
         System.out.println("Ener A Number:");
         int num=input.nextInt();
-        Boolean prime=true;
-        for(int i=2;i<=Math.sqrt(num);i++){
-            if(num%i==0){
-                prime=false;
-                break;
-            }
-            else{
-                prime=true;
-            }
+        int num1=num;
+        int sum=0;
+        while(num>0){
+            int temp=num%10;
+            sum=(sum*10)+temp;
+            num=num/10;
         }
-        if(prime==true){
-            System.out.println(num +" "+"is a prime number");
+        if(sum==num1){
+            System.out.println("The number is palindrome");
         }
         else{
-            System.out.println(num +" "+"is not a prime number");
+            System.out.println("The number is not a palindrome");
         }
     }
 }
