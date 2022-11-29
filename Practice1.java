@@ -3,20 +3,32 @@ import java.math.*;
 public class Practice1 {
     public static void main(String[]args){
         Scanner input=new Scanner(System.in);
-        System.out.println("Ener A Number:");
-        int num=input.nextInt();
-        int num1=num;
-        int sum=0;
-        while(num>0){
-            int temp=num%10;
-            sum=(sum*10)+temp;
-            num=num/10;
+        String[][]arr=new String[8][8];
+        int testcases=input.nextInt();
+        while(testcases-->0){
+            int b=0;
+            int r=0;
+        for(int i=0;i<8;i++){
+            for(int j=0;j<8;j++){
+                arr[i][j]=input.next();
+                if(arr[i][j].equals("B")){
+                    b++;
+                }
+                else if(arr[i][j].equals("R")){
+                    r++;
+                }
+            }
         }
-        if(sum==num1){
-            System.out.println("The number is palindrome");
+        if(b>r){
+            System.out.println("B");
+        }
+        else if(r>b){
+            System.out.println("R");
         }
         else{
-            System.out.println("The number is not a palindrome");
+            System.out.println("B");
         }
+        }
+    
     }
 }
