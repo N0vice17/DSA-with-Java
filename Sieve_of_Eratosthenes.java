@@ -23,6 +23,11 @@ public class Sieve_of_Eratosthenes{
                 prime++;
             }
         }
+        for(int i=1;i<=arr.length-1;i++){
+            if(arr[i]==0){
+                System.out.println(i);
+            }
+        }
         System.out.println(prime);
     }
 }
