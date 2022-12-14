@@ -32,5 +32,6 @@ public class Exponentiation{
         Scanner input=new Scanner(System.in);
         //System.out.println(exponent(2,63));
         System.out.println(exponent1(3,4,5));
+        input.close();
     }
 }
