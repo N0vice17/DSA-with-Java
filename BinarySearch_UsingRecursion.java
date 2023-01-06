@@ -20,5 +20,6 @@ public class BinarySearch_UsingRecursion{
 		int[]arr={1,2,3,4,5,6,7,8};
 		int k=6; 
 		System.out.println(binarysearch(arr,k,0,arr.length-1));
+		input.close();
 	}
 }
